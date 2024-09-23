@@ -500,7 +500,7 @@ button {
 }
 
 .button_atuliza, .button_cadastrar, .button_editar, .button_excluir {
-    width: 5.6rem;
+    width: 5.4rem;
 }
 /*--------------------------------------Responsivo*/
 @media (max-heigth: 660px){
