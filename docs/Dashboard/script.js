@@ -29,7 +29,16 @@ palanca.addEventListener("click",() => {
     let body = document.body;
     body.classList.toggle("dark_mode");
     circulo.classList.toggle("prendido");
+
+    // Salvar a preferência de tema no localStorage
+    if (body.classList.contains("dark_mode")) {
+        localStorage.setItem("theme", "dark");
+    } else {
+        localStorage.setItem("theme", "light");
+    }
 });
+
+
 
 menuIcon.addEventListener("click",() => {
     barraLateral.classList.toggle("mini_barra_lateral");
@@ -37,10 +46,41 @@ menuIcon.addEventListener("click",() => {
     spans.forEach((span)=>{
         span.classList.toggle("oculto");
     })
+
+    // Salvar o estado da barra lateral no localStorage sem modificar seu comportamento original
+    if (barraLateral.classList.contains("mini_barra_lateral")) {
+        localStorage.setItem("sidebar", "minimized");
+    } else {
+        localStorage.setItem("sidebar", "maximized");
+    }
 });
 
 
 
+
+
+
+
+
+
+
+// Verificar o localStorage e restaurar o tema e a barra lateral ao carregar a página
+window.addEventListener("load", () => {
+    const theme = localStorage.getItem("theme");
+    if (theme === "dark") {
+        document.body.classList.add("dark_mode");
+        circulo.classList.add("prendido");
+    }
+
+    const sidebarState = localStorage.getItem("sidebar");
+    if (sidebarState === "minimized") {
+        barraLateral.classList.add("mini_barra_lateral");
+        main.classList.add("min_main");
+        spans.forEach((span) => {
+            span.classList.add("oculto");
+        });
+    }
+});
 
 
 
@@ -68,7 +108,7 @@ var data = [{
   Plotly.newPlot('myDiv', data, layout)
 
 
-  
+
 
   function clickMenu(){
     if (menuFiltro.style.display == 'block'){
