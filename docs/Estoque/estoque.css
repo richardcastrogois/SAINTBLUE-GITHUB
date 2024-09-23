@@ -217,10 +217,6 @@ body{
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-/*------------------------->Menu de Navegacao = INDIVIDUAL PARA CADA PAGINA*/
-
-
-
 /*------------------------->Menu de Navegacao = Linha*/
 .barra-lateral .linha{
     width: 100%;
@@ -377,6 +373,7 @@ main.min_main {
 
 .search_box{
     background: linear-gradient(to right, #2d5d5f, #449194, #66d2d6);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.156);
     color: var(--color-main);
     border-radius: 30px;
     height: 35px;
@@ -415,6 +412,67 @@ main.min_main {
     margin-right: 10px;
 }
 
+/*-------------------------------------------MAIN = FILTRO*/
+i#filter{
+    background-color: #2d5d5fe7;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.156);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 2.3rem;
+    width: 5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+i#filter:hover{
+    background: linear-gradient(to right, #2d5d5f, #397a7c, #54adb0);
+}
+
+.filtro{
+    position: relative;
+    background: var(--color-main);
+    border-radius: 1rem;
+    display: block;
+}
+
+.menu_filtro{
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    display: none;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10; 
+}
+.filtro ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.filtro a{
+    color: #0a0a0a;
+    display: block;
+    padding: 5px;
+    margin: 0.2rem;
+    text-decoration: none;
+    text-align: center;
+}
+.filtro a.selected {
+    background: linear-gradient(to right, #2d5d5f, #397a7c, #54adb0);
+    border-radius: 1rem;
+    color: var(--color-menu-houver-texto);
+  }
+
+.filtro a:hover{
+    background: linear-gradient(to right, #2d5d5f, #397a7c, #54adb0);
+    border-radius: 1rem;
+    color:var(--color-menu-houver-texto)
+}
+
 /*-------------------------------------------MAIN = BOTOES FIXOS*/
 .atualiza_export {
     display: flex;
@@ -442,7 +500,7 @@ button {
 }
 
 .button_atuliza, .button_cadastrar, .button_editar, .button_excluir {
-    width: 4.7rem;
+    width: 5.8rem;
 }
 /*--------------------------------------Responsivo*/
 @media (max-heigth: 660px){

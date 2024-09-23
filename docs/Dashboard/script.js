@@ -66,3 +66,31 @@ var data = [{
     }
   
   Plotly.newPlot('myDiv', data, layout)
+
+
+  
+
+  function clickMenu(){
+    if (menuFiltro.style.display == 'block'){
+        menuFiltro.style.display = 'none'
+    } else {
+        menuFiltro.style.display = 'block'
+    }
+  }
+
+  function selectOption(optionElement) {
+    optionElement.classList.toggle('selected');
+
+    // Aqui você pode adicionar a lógica para filtrar os dados com base nas opções selecionadas
+    const selectedOptions = document.querySelectorAll('.filtro a.selected');
+    const selectedFilters = Array.from(selectedOptions).map(option => option.id);
+
+    // Exemplo de filtragem (substitua pela sua lógica):
+    // Filtrar dados com base nos filtros selecionados:
+    filterData(selectedFilters);
+  }
+
+  function filterData(selectedFilters) {
+    // Lógica para filtrar os dados com base nos filtros selecionados
+    // ...
+  }
