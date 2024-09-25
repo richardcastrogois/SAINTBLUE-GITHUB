@@ -6,6 +6,7 @@ const circulo = document.querySelector(".circulo");
 const menu = document.querySelector(".menu");
 const main = document.querySelector("main");
 
+
 menu.addEventListener("click",()=>{
     barraLateral.classList.toggle("max_barra_lateral");
     if(barraLateral.classList.contains("max_barra_lateral")){
@@ -23,7 +24,10 @@ menu.addEventListener("click",()=>{
             span.classList.add("oculto");
         })
     }
+
+    
 });
+
 
 palanca.addEventListener("click",() => {
     let body = document.body;
@@ -59,11 +63,6 @@ menuIcon.addEventListener("click",() => {
 
 
 
-
-
-
-
-
 // Verificar o localStorage e restaurar o tema e a barra lateral ao carregar a página
 window.addEventListener("load", () => {
     const theme = localStorage.getItem("theme");
@@ -81,9 +80,6 @@ window.addEventListener("load", () => {
         });
     }
 });
-
-
-
 
 
 
