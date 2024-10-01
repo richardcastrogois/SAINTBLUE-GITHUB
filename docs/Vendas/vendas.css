@@ -6,10 +6,10 @@
     --color-texto: #000000;
     --color-texto-menu: #000000;
 
-    --color-menu-houver: #2d5d5f;
+    --color-menu-houver: #2d979b;
     --color-menu-houver-texto: #f5f3f3f1;
 
-    --color-main-fundo: #2d5d5f;
+    --color-main-fundo: #2d979b;
     --color-main-fundo-btn: #ffffff;
     --color-main-fundo-texto: #000000;
     
@@ -38,14 +38,14 @@
     --color-texto: #ffffff;
     --color-texto-menu: #c4c4c5;
 
-    --color-menu-houver: #2d5d5f;
+    --color-menu-houver: #2d979b;
     --color-menu-houver-texto: #eeeeee;
 
     --color-main-fundo: #c4c4c5;
-    --color-main-fundo-btn: #2d5d5f;
+    --color-main-fundo-btn: #2d979b;
     --color-main-fundo-texto: #ffffff;
     
-    --color-boton: #2d5d5f;
+    --color-boton: #2d979b;
     --color-boton-texto: #ffffff;
 
     --color-linha: #5a5a5a;
@@ -219,7 +219,7 @@ body{
 }
 
 /* Estilo quando o botão estiver ativo */
-.barra-lateral .navegacao .fixe_fornecedores a.active {
+.barra-lateral .navegacao .fixe_vendas a.active {
     background: var(--color-menu-houver);
     color: var(--color-menu-houver-texto);
     transition: background 0.3s ease, color 0.3s ease;
@@ -242,10 +242,10 @@ body{
     display: flex;
     justify-content: space-between;
     padding-right: 10px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .barra-lateral .modo_escuro * {
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
 }
 .barra-lateral .modo_escuro .info{
     width: 150px;
@@ -323,7 +323,7 @@ body{
 /*---------------------------------------Main*/
 main{
     margin-left: 250px;
-    padding: 0.6rem;
+    padding: 8px 8px;
     background-color: var(--color-main);
     color: var(--color-main-texto);
     width: calc(100% - 250px);
@@ -339,21 +339,9 @@ main.min_main {
     justify-content: center;
     align-items: center;
     font-size: 2.8rem;
+    margin-top: 50px;
     height: 100%;
     z-index: 2;
-}
-
-.welcome{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    font-weight: bold; 
-    font-size: 1.5rem;
-    position: relative;
-    padding: 0.5rem;
-    z-index: 1;
-    margin-top: -3rem;
-    width: 100%; 
 }
 
 /*------------------------->Main = Linha*/
@@ -508,7 +496,7 @@ button {
     cursor: pointer;
 }
 
-.button_atuliza, .button_cadastrar, .button_editar, .button_excluir {
+.button_atuliza, .button_excluir {
     width: 5rem;
 }
 
@@ -618,6 +606,14 @@ thead th {
     }
 }
 
+@media (max-width: 770px){
+    main.min_main {
+        width: 100%;
+        transition: margin-left 0.5s ease, width 0.5s ease;
+    }
+
+}
+
 /* Media query para telas menores que 768px */
 @media (max-width: 768px) {
     .main .container {
@@ -634,7 +630,7 @@ thead th {
 
     .search_box {
         height: 40px;
-        margin-left: 12rem; /* Adiciona margem para separar da área do filtro */
+        margin-left: 12rem;
     }
     .filtro{
         margin-right: 12rem;
@@ -703,7 +699,7 @@ thead th {
         height: 2rem;
         padding: 3px;
     }
-    .button_atuliza, .button_cadastrar, .button_editar, .button_excluir {
+    .button_atuliza, .button_excluir {
         width: 8rem;
     }
 }

@@ -6,10 +6,10 @@
     --color-texto: #000000;
     --color-texto-menu: #000000;
 
-    --color-menu-houver: #2d5d5f;
+    --color-menu-houver: #2d979b;
     --color-menu-houver-texto: #f5f3f3f1;
 
-    --color-main-fundo: #2d5d5f;
+    --color-main-fundo: #2d979b;
     --color-main-fundo-btn: #ffffff;
     --color-main-fundo-texto: #000000;
     
@@ -34,14 +34,14 @@
     --color-texto: #ffffff;
     --color-texto-menu: #c4c4c5;
 
-    --color-menu-houver: #2d5d5f;
+    --color-menu-houver: #2d979b;
     --color-menu-houver-texto: #eeeeee;
 
     --color-main-fundo: #c4c4c5;
-    --color-main-fundo-btn: #2d5d5f;
+    --color-main-fundo-btn: #2d979b;
     --color-main-fundo-texto: #ffffff;
     
-    --color-boton: #2d5d5f;
+    --color-boton: #2d979b;
     --color-boton-texto: #ffffff;
 
     --color-linha: #5a5a5a;
@@ -312,10 +312,11 @@ body{
     font-size: 20px;
 }
 
+
 /*---------------------------------------Main*/
 main{
     margin-left: 250px;
-    padding: 0.6rem;
+    padding: 8px 8px;
     background-color: var(--color-main);
     color: var(--color-main-texto);
     width: calc(100% - 250px);
@@ -331,22 +332,182 @@ main.min_main {
     justify-content: center;
     align-items: center;
     font-size: 2.8rem;
+    margin-top: 50px;
     height: 100%;
     z-index: 2;
 }
 
-.welcome{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    font-weight: bold; 
-    font-size: 1.5rem;
-    position: relative;
-    padding: 0.5rem;
-    z-index: 1;
-    margin-top: -3rem;
-    width: 100%; 
+
+/*------------------------->POP-UP
+/* Estilos do botão de imagem */
+.open-popup-btn {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
+
+/* Animação no hover */
+.open-popup-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos do fundo do pop-up */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(49, 49, 49, 0.1);
+    backdrop-filter: blur(2px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+/* Estilos do pop-up no formato de celular */
+.popup-content {
+    width: 350px;
+    height: 600px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para o cabeçalho do pop-up */
+.popup-header {
+    background: var(--color-main-fundo);
+    padding: 17px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    color: white;
+}
+
+/* Estilo da seção de perfil */
+.perfil {
+    background-color: #eee;
+    padding: 20px; 
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popup-btnSair {
+    background-color: var(--color-main-fundo);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.btn_txt:hover{
+    color: var(--color-main-texto);
+    transform: scale(1.1);
+}
+.popup-action-btn:hover{
+    background-color: rgb(188, 187, 187);
+    color: var(--color-main-texto);
+    transform: scale(1.1);
+}
+
+.popup-action-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 13px auto;
+    padding: 20px 30px;
+}
+
+/* Estilo para alterar foto */
+.alterar-foto {
+    text-align: center;
+    font-size: 18px;
+    color: #40706b;
+    cursor: pointer;
+}
+
+/* Estilos para informações */
+.informacoes h2 {
+    font-size: 10px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+
+.informacoes input {
+    width: 100%;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 2px solid #40706b;
+    background-color: transparent;
+    font-size: 14px;
+    color: #333;
+}
+.informacoes input:focus{
+    border: none;
+    transition: border 0;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 60px;
+    margin: auto;
+    color: white;
+    border-radius: 10px;
+    font-size: 28px;
+}
+
+/* Estilo do texto dentro do botão */
+.btn_txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+
+.btn button {
+    padding: 18px 20px;
+    background-color: #40706b;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo no hover do botão */
+.btn button:hover {
+    background-color: #2f5c54; /* Efeito hover */
+}
+
+/* Botão de fechar o pop-up */
+.close-popup {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
 
 /*------------------------->Main = Linha*/
 .linha_main{
@@ -506,63 +667,64 @@ button {
     width: 5rem;
 }
 /* COMEÇO DO CODIGO */
-.container {
+.container  {
     padding: 0 10px;
-    padding-bottom: 5%;
+    padding-bottom: 1%;
     max-width: 100%;
     display: flex;
-    flex-direction: column; /* Exibe os crachás em coluna (um abaixo do outro) */
-    gap: 20px; /* Espaçamento entre os crachás */
-    align-items: center; /* Centraliza os crachás horizontalmente */
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
 }
 .cracha {
     padding-top: 20px;
     margin-top: 30px;
     padding-top: 10px;
-    display: flex; /* Para colocar as informações e a imagem lado a lado */
+    display: flex;
     padding-right:  10px;
-    align-items: center; /* Alinhar verticalmente */
-    border: 2px solid #ddd; /* Borda do crachá */
-    border-radius: 20px; /* Borda arredondada */
-    height: 200px;
+    align-items: center;
+    border: 2px solid #ddd; 
+    border-radius: 20px;
+    height: 230px;
+    max-height: 100%;
     max-width: 100%;
     background-color: #ebebeb; /* Cor de fundo do crachá */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Sombra */
+    box-shadow: 0 4px 16px rgba(2, 203, 253, 0.473); /* Sombra */
 }
 
 .cracha:hover{
     transform: scale(1.05);
 }
 
-/* Informações à esquerda */
-.cracha .info {
-    flex-direction: column; /* Exibir o conteúdo em uma coluna */
+
+.cracha .info h2 {
+    margin: 5px;
+    font-size: 1rem;
+    color: #666;
+    border-bottom: 1px solid #000; /* Linha abaixo de cada parágrafo */
+    padding-bottom: 5px; /* Espaço entre o texto e a linha */
+}
+.cracha .info h2 span {
+    font-weight: bold;
+    font-size: 0.5rem;
+    color: #000;
 }
 
 /* Tamanho da imagem */
 .cracha .imagem img {
-    margin-top: 10px;
-    height: 120px;
-    max-width: 120px; /* Largura máxima da imagem */
-    border-radius: 20px; /* Deixar a imagem redonda */
-}
-
-.cracha h2 {
-    margin: 5px;
-    font-size: 12px;
-    color: #666;
-    border-bottom: 1px solid #070707; /* Linha abaixo de cada parágrafo */
-    padding-bottom: 5px; /* Espaço entre o texto e a linha */
-    font-family: 'Brush Script MT', cursive;
-}
-
-.cracha h2 span {
-    font-family: 'Brush Script MT', cursive;
-    font-weight: bold;
-    font-size: 9px;
-    color: #000;
+    margin-top: 25px;
+    height: 100px;
+    width: 100px;
+    max-width: 150px;
+    border-radius: 10px; /
 }
 /*--------------------------------------Responsivo*/
+@media (min-width: 970px){
+    .container {
+        flex-direction: row;   
+    }
+}
 @media (max-heigth: 660px){
     .barra-lateral .nome-pagina{
         margin-bottom: 5px;
@@ -601,69 +763,12 @@ button {
       flex-basis: 100%;
 }
 }
-@media (min-width: 768px){
-    
-    /* COMEÇO DO CODIGO */
-    br{
-        display: none;
-    }
-    .container {
-        padding-bottom: 1%;
-        max-height: 100%;
-        max-width: 100%;
-        display: flex;
-        flex-direction: row; /* Exibe os crachás em coluna (um abaixo do outro) */
-        gap: 20px; /* Espaçamento entre os crachás */
-        align-items: center; /* Centraliza os crachás horizontalmente */
-    }
-    .cracha {
-        gap: 20px;
-        max-height: 100%;
-        max-width: 100%; /* Largura máxima do crachá */
-        padding: 10px 10px;
-        margin-top: 10px;
-        display: flex; /* Para colocar as informações e a imagem lado a lado */
-        align-items: center; /* Alinhar verticalmente */
-        border: 2px solid #ddd; /* Borda do crachá */
-        border-radius: 20px; /* Borda arredondada */
-        height: 200px;
-        background-color: #ebebeb; /* Cor de fundo do crachá */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Sombra */
+@media (max-width: 770px){
+    main.min_main {
+        width: 100%;
+        transition: margin-left 0.5s ease, width 0.5s ease;
     }
 
-    .cracha:hover{
-        transform: scale(1.05);
-    }
-
-    /* Informações à esquerda */
-    .cracha .info {
-        flex-direction: column; /* Exibir o conteúdo em uma coluna */
-    }
-
-    /* Tamanho da imagem */
-    .cracha .imagem img {
-        height: 100px;
-        width: 120px; 
-        max-width: 100%;
-        max-height: 100%;
-        border-radius: 20px; 
-    }
-
-    .cracha h2 {
-        margin: 5px;
-        font-size: 10px;
-        color: #666;
-        border-bottom: 1px solid #070707; /* Linha abaixo de cada parágrafo */
-        padding-bottom: 5px; /* Espaço entre o texto e a linha */
-        font-family: 'Brush Script MT', cursive;
-    }
-
-    .cracha h2 span {
-        font-family: 'Brush Script MT', cursive;
-        font-weight: bold;
-        font-size: 9px;
-        color: #000;
-    }
 }
 @media (min-width: 900px){
     .buscar {
