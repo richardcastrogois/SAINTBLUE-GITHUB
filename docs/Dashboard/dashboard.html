@@ -8,11 +8,6 @@
     <link rel="stylesheet" href="../Dashboard/dashboard.css">
     <link rel="stylesheet" href="../Perfil/perfil.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src='https://cdn.plot.ly/plotly-2.35.2.min.js'></script>
-    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 </head>
 <body>
     <div class="menu">
@@ -28,48 +23,40 @@
         </div>
         <nav class="navegacao">
             <ul>
-                <li class="fixe_dashboard">
+                <li class="fixe_inicio">
                     <a href="#" rel="next" target="_self" class="active">
-                        <i class="bi bi-clipboard2-data"></i>
-                        <span class="txtNavegacao">Dashboard</span>
+                        <i class="bi bi-house-door"></i>
+                        <span class="txtNavegacao">Inicio</span>
                     </a>
                 </li>
-                <br>
+
                 <li>
                     <a href="../Estoque/estoque.html" rel="next" target="_self">
                         <i class="bi bi-boxes"></i>
                         <span class="txtNavegacao">Estoque</span>
                     </a>
                 </li>
-                <br>
+
                 <li>
                     <a href="../Vendas/vendas.html" rel="next" target="_self">
                         <i class="bi bi-graph-up-arrow"></i>
                         <span class="txtNavegacao">Vendas</span>
                     </a>
                 </li>
-                <br>
+
                 <li>
                     <a href="../Fornecedores/fornecedores.html" rel="next" target="_self">
                         <i class="bi bi-person-workspace"></i>
                         <span class="txtNavegacao">Fornecedores</span>
                     </a>
                 </li>
-                <br>
+
                 <li>
                     <a href="../Colaboradores/colaboradores.html" rel="next" target="_self">
                         <i class="bi bi-file-earmark-person"></i>
                         <span class="txtNavegacao">Colaboradores</span>
                     </a>
-                </li>
-                <br>
-                <br>              
-                <li>
-                    <a href="../login.html" rel="next" target="_self">
-                        <i class="bi bi-box-arrow-left"></i>
-                        <span class="btnSair">Sair</span>
-                    </a>
-                </li>
+                </li>               
             </ul>
         </nav>
         <div>
@@ -87,20 +74,31 @@
                 </div>
             </div>
         </div>
+        <div class="sair">
+            <ul>
+                <li>
+                    <a href="../login.html" rel="next" target="_self">
+                        <i class="bi bi-box-arrow-left"></i>
+                        <span class="btnSair">Sair</span>
+                    </a>
+                </li>
+            </ul>
+        </div>    
         <div class="usuario">
             <img src="../Dashboard/imagensutilizadas/263457215_5031922253486891_358383527080523036_n.jpg" alt="Botão de Acesso" class="open-popup-btn" onclick="openPopup()">
             <div class="info-usuario">
                 <div class="nome_telefone">
                     <span class="nome">Richard Gois</span>
                 </div>
-                <i class="bi bi-three-dots-vertical"></i>
+                <div>
+                    <i class="bi bi-three-dots-vertical"></i>
                 </div>
             </div>
         </div>
     </div>
     <main>
         <div class="container">
-            <h1 class="aba">Dashboard</h1>
+            <h1 class="aba">Inicio</h1>
         </div>
         <br>
         <div>
@@ -124,56 +122,46 @@
             </div>
         </div>
 
-        <br>
-        <div class="grafico_1">
-            <div class="grafico_barra" id='myDiv1' data-title="Vendas de Produtos por Mês"></div>
-            <div class="grafico_speed" id='myDiv4' data-title="Em Estoque"></div>
-            
-        </div>
-        <div class="grafico_2">
-            <div class="grafico_pizza" id='myDiv2' data-title="Vendas por Produto - Setembro"></div>
-            <div class="grafico_linha" id='myDiv3' data-title="Em Estoque"></div>
-        </div>
-
         <!-- Pop-up com formato de celular -->
-    <div class="popup-overlay" id="popupOverlay">
-        <div class="popup-content" id="popupContent">
-            <!-- Botão para fechar o pop-up -->
-            <span class="close-popup" onclick="closePopup()">&times;</span>
-            
-            <!-- Conteúdo do pop-up -->
-            <div class="popup-header">
-                <h2>Perfil</h2>
-            </div>
-            <div class="perfil">
+        <div class="popup-overlay" id="popupOverlay">
+            <div class="popup-content" id="popupContent">
+                <!-- Botão para fechar o pop-up -->
+                <span class="close-popup" onclick="closePopup()">&times;</span>
                 
-                <div class="form">
-                    <label class="photo-upload" for="product-image"><i class="bi bi-person-bounding-box"></i>Foto do Produto</label>
-                    <input type="file" id="product-image" name="product-image" accept="image/*" required>
+                <!-- Conteúdo do pop-up -->
+                <div class="popup-header">
+                    <h2>Perfil</h2>
+                </div>
+                <div class="perfil">
+                    <div class="form">
+                        <label class="photo-upload" for="product-image"><i class="bi bi-person-bounding-box"></i>Foto de Perfil</label>
+                        <input type="file" id="product-image" name="product-image" accept="image/*" required>
+                    
+                        <div class="informacoes">
+                            <h2>Nome:</h2>
+                            <input type="text" placeholder="Nome">
+                            
+                            <h2>Tel.:</h2>
+                            <input type="text" placeholder="Tel.">
+                            
+                            <h2>E-mail:</h2>
+                            <input type="email" placeholder="email">
+                            
+                            <h2>Endereço:</h2>
+                            <input type="text" placeholder="End.">
+                        </div>
+                        
+                        <div class="btn">
+                            <button class="btn_txt">Alterar Perfil</button>
+                        </div>
+                    </div> <!-- Fechamento da div form -->
+                </div>
                 
-                <div class="informacoes">
-                    <h2>Nome:</h2>
-                    <input type="text" placeholder="Nome">
-                    
-                    <h2>Tel.:</h2>
-                    <input type="text" placeholder="Tel.">
-                    
-                    <h2>E-mail:</h2>
-                    <input type="email" placeholder="email">
-                    
-                    <h2>Endereço:</h2>
-                    <input type="text" placeholder="End.">
+                <div class="popup-btnSair">
+                    <button class="popup-action-btn">Salvar</button>
                 </div>
-        
-                <div class="btn">
-                    <button class="btn_txt" >Alterar Cadastro</button>
-                </div>
-            </div>
-            <div class="popup-btnSair">
-                <button class="popup-action-btn">Salvar</button>
-            </div>
-        </div>
-    </div>
+            </div> <!-- Fechamento da div popup-content -->
+        </div> <!-- Fechamento da div popup-overlay --> 
     </main>
     <script src="../Dashboard/script.js"></script>
 </body>
