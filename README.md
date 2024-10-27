@@ -34,7 +34,6 @@ O controle de estoque é a gestão dos produtos disponíveis em uma empresa, mon
 
 
 ## 👨‍💻 Desenvolvedores
-- [Alciri (Backend)](https://github.com/AlciriJunior)
 - [Daniel (Frontend)](https://github.com/Soft5Code)
 - [Eduardo (Backend)](https://github.com/Yujizzx)
 - [Gabriel (Backend)](https://github.com/N4-cloud)
