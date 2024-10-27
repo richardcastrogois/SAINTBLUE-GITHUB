@@ -1,14 +1,22 @@
 ### 📌 RESOLVENDO OS PROBLEMAS 
 <br> 
-
---------------------------------------------------------------
-### REMOÇÃO DO DASHBOARD -> No LUGAR UMA PAGINA INICIAL -> <span style="color: pink;">RICHARD</span>
-### ORGANIZAÇÃO DO CSS -> <span style="color: red;">DANIEL</span>
-### RESOLVER AS PICAS DO JS * -> <span style="color: pink;">RICHARD</span>
-### REINCLUIR O BOTAO DE EDITAR NAS PAGES -> <span style="color: blue;">PEDRO</span>
-### OLHAR O POPUP -> <span style="color: blue;">PEDRO</span>
-### ID DUPLICADA -> DUPLICT IMAGE, ACESSOHOME E os BOTOES DO LOGIN -> <span style="color: blue;">PEDRO</span>
-### RESOLVER O PROBLEMA DO BOTAO DE SAIR -> <span style="color: pink;">RICHARD</span>
-### MEXER NO POPUP DO PERFIL -> <span style="color: blue;">PEDRO</span>
-### RESOLVER PROBLEMAS FORN/COLAB -> <span style="color: red;">DANIEL</span>
 -------------------------------------------------------------
+
+### -> <span style="color: red;">DANIEL</span>
+### 1- CARDS FORNECEDORES = (EDITAR E EXCLUIR) ARRUMAR
+### 2- BARRA ATUALIZAR = TODAS AS TELAS
+### 3- BOTAO FILTRO = FORNECEDORES E COLABORADORES
+
+<br> 
+-------------------------------------------------------------
+
+### -> <span style="color: blue;">PEDRO</span>
+### 1- BOTAO PERFIL = ARRUMAR O SALVAR, POP-UP
+### 2- POP-UP PARA TELAS MENORES
+
+<br> 
+-------------------------------------------------------------
+
+### -> <span style="color: pink;">RICHARD</span>
+### 1- LINHA  MAIN = VERIFICAR PORQUE TA SUBINDO E DESCENDO
+### 2- BUSCA RAPIDA EM TODAS AS TELAS BUGADA
