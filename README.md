@@ -30,7 +30,7 @@ O controle de estoque é a gestão dos produtos disponíveis em uma empresa, mon
 - [POSTGRES](https://www.postgresql.org)
 
 ## 👨‍🎓 WYDEN
-<p>Esta maravilhosa ferramenta foi feta por alunos e futuros desenvolvedores, da WYDEN. Uma excelente faculdade, localizada no Município de Campinas. Somos cursantes do curso de ADS desta unidade </p>
+<p>Esta maravilhosa ferramenta foi feta por alunos e futuros desenvolvedores, da WYDEN. Uma excelente faculdade, localizada no Município de Campinas. Somos cursantes do curso de ADS desta unidade. </p>
 
 
 ## 👨‍💻 Desenvolvedores
